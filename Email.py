@@ -14,7 +14,7 @@ def GetUrl():
     urls = []
     word = 'A'
     i=0
-    while i < ord('Z')+1: 
+    while i < 26: 
         urls.append("http://homepage.hit.edu.cn/names/"+chr(ord(word)+i))
         #print "http://homepage.hit.edu.cn/names/"+chr(ord(word)+i)
         i += 1
