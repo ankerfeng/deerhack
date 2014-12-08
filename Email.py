@@ -12,12 +12,10 @@ from urllib import urlopen
 
 def GetUrl():
     urls = []
-    word = 'A'
-    i=0
-    while i < 26: 
-        urls.append("http://homepage.hit.edu.cn/names/"+chr(ord(word)+i))
+    
+    for i in xrange(65, 91): 
+        urls.append("http://homepage.hit.edu.cn/names/"+chr(i))
         #print "http://homepage.hit.edu.cn/names/"+chr(ord(word)+i)
-        i += 1
     return urls
 
 def Purl(urladdr):
@@ -52,7 +50,7 @@ def Email(urladdr):
         
 if __name__ == '__main__':
     f = open('email.txt', 'a')
-    f.write("=====================\n")
+    f.write("=====================\n")#如果挂掉的时候需要手动从上次接着跑的时候，这个会起到一个标记的作用
     f.close()
     urls = GetUrl()
     for url in urls:
