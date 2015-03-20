@@ -2,6 +2,10 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.io.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<form>
+    <textarea rows="4" cols="60" name="query"></textarea></br>
+    <button type="submit">executeQuery</button>
+</form>
 <%
 
 try {
@@ -37,8 +41,4 @@ try {
     response.setStatus(200);
     e.printStackTrace();
 }
-
-out.println("<form action=\"\" method=\"\">" +
-            "<input type=\"\" value=\"\" name=\"query\" size=20>" +
-            "</form>");
 %>
